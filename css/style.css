@@ -903,7 +903,7 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
     padding: 14px 10px;
 }
 
-.footer-end p{
+.footer-end p, .footer-end span{
     color: #FFF;
     font-family: "Zen Kaku Gothic New";
     font-size: 10px;
@@ -916,7 +916,7 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
     background-color: #000;
 }
 
-.footer-end .corporate {
+.footer-end .corporate a{
     display: flex;
     justify-content: center;
 }
