@@ -1,0 +1,1363 @@
+/* * * * * * * * * * * * * * * * * * 
+ * 
+ * PCサイズ スタイル 
+ * 1281px 〜 固定値
+ *
+ * * * * * * * * * * * * * * * * * */
+
+ /* ▼▼▼　共通アイテム ▼▼▼　*/
+.pc-only {
+    display: block;
+}
+.sp-only {
+    display: none;
+}
+
+.plus {
+    display: inline-block;
+    width: 7px;
+    height: 1px;
+    background-color: #E1222A;
+    position: relative;
+}
+
+.arrow-more {
+    max-width: 20px;
+    max-height: 20px;
+    background-color: #E1222A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.arrow-more svg {
+    width: 9px;
+    height: 9px;
+    padding: 5px;
+}
+
+h3 {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.eng-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 32px; */
+}
+.eng-title .eng-text {
+    color: #E1222A;
+    margin: 8px;
+    font-family: "Shippori Mincho B1";
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 28.9px;
+    letter-spacing: -1px;
+}
+
+h3 .jp-title{
+    width: 100%;
+    text-align: center;
+    color: #E1222A;
+    font-family: "Shippori Mincho B1";
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -3.6px;
+    
+}
+
+.chat-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-box p {
+    max-width: 227px;
+    background-color: #FFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: relative;
+
+    color: #000;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.5px;
+}
+
+.chat-box-right p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 16px solid #FFF;
+    border-top: 0;
+    transform: translateX(calc(100% - 3px)) translateY(-50%) rotate(90deg);
+}
+
+.chat-box-left p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 16px solid #FFF;
+    border-top: 0;
+    transform: translateX(calc(-100% + 3px)) translateY(-50%) rotate(-90deg);
+}
+
+.chat-box img {
+    width: 70px;
+    height: 70px;
+    margin: 0 18px;
+    border-radius: 100%;
+}
+
+.chat-box-left img {
+    margin-left: 0;
+}
+
+.chat-box-right img {
+    margin-right: 0;
+}
+
+/* ▲▲▲　共通アイテム ▲▲▲　*/
+
+body {
+    background-image:
+    radial-gradient(#DCDCDC 9%, transparent 9%);
+    background-size: 12px 12px;
+    /* background-position: 0 0, 20px 20px; */
+    background-color: #F3F3F3;
+}
+
+.main {
+    width: 100%;
+}
+
+.plus::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 7px;
+    background-color: #E1222A;
+    top: -3px;
+    /* transform: translateY(-50%); */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ /* ▼▼▼　header ▼▼▼　*/
+header{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.header-guide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image:none;
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #EAEAEA;
+    /* margin-bottom: 4px; */
+}
+
+.logo-area {
+    max-width: 211px;
+    width: 30%;
+    height: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 356px;
+}
+
+.header-nav ul {
+    display: flex;
+    margin: 0;
+}
+
+.header-nav ul li {
+    list-style: none;
+    font-family: "Shippori Mincho B1";
+    margin: 0 12px;
+}
+
+.header-nav ul li a {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.logo-area img {
+    width: 100%;
+}
+
+.header-cta {
+    max-width: 228px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1222A;
+}
+
+.header-cta a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 12px 14px 20px;
+}
+
+.header-cta a span {
+    display: inline-block;
+    margin-right: 12px;
+    color: #FFF;
+    font-family: "Shippori Mincho B1";
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 21px;
+    letter-spacing: -0.32px;
+    white-space: nowrap;
+}
+
+.cta-arrow {
+    width: 24px;
+    height: 24px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.cta-arrow::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    width: 7.5px;
+    height: 7.5px;
+    border-top: 2px solid #E1222A;
+    border-right: 2px solid #E1222A;
+    transform: rotate(45deg);
+}
+
+.header-guide-sp {
+    display: none;
+}
+
+/* header-contents */
+
+.header-contents {
+    width: 100%;
+}
+
+.header-img {
+    width: 100%;
+    text-align: center;
+}
+
+.hero-catch {
+    font-family: "Shippori Mincho B1";
+    font-size: 100px;
+    font-weight: 800;
+    color: #E1222A;
+    letter-spacing: -14px;
+    transform: translateY(40px);
+    position: relative;
+    z-index: 4;
+}
+
+.hero-photos {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-left {
+    width: calc((100% - 445px) / 2);
+    height: 440px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-center {
+    max-width: 445px;
+    height: 440px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-catch span {
+    color: #E1222A;
+    letter-spacing: -20px;
+}
+
+.hero-catch span.narrow {
+    letter-spacing: -80px;
+}
+
+.hero-right {
+    width: calc((100% - 445px) / 2);
+    height: 440px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-center .hero-center-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-center .hero-center-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-left-1 { position: absolute; width: 154px; top: -50px;  right: 300px;}
+.hero-left-2 { position: absolute; width: 154px; top: 120px;  right: -100px;}
+.hero-left-3 { position: absolute; width: 228px; top: 260px;  right: 130px;}
+.hero-left-4 { position: absolute; width: 264px; top: 620px;  right: 220px;}
+.hero-left-5 { position: absolute; width: 210px; top: 914px;  right: 50px;}
+
+.hero-right-1 { position: absolute; width: 204px; top: 0px;  left: 60px;}
+.hero-right-2 { position: absolute; width: 228px; top: 400px;  left: 130px;}
+.hero-right-3 { position: absolute; width: 166px; top: 679px;  left: 290px;}
+.hero-right-4 { position: absolute; width: 155px; top: 890px;  left: 90px;}
+
+
+.hero-photo img {
+    width: 100%;
+}
+
+/* message */
+.header-text {
+    position: relative;
+    z-index: 0;
+    width: 75%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 64px 48px;
+    text-align: center;
+    background-color: #FFF;
+    margin-bottom: 80px;
+    
+}
+
+.message-title {
+    margin: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message-title h2 {
+    color: #E1222A;
+    font-family: "Shippori Mincho B1";
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 14px;
+}
+
+.message {
+    font-family: "Shippori Mincho B1";
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    text-align: center;
+}
+
+.message p {
+    margin: 0 0 1em;
+    line-height: 2;
+}
+
+.message-lead {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.message-sub {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.message-ending:last-child {
+    margin: 0;
+}
+
+/* ▲▲▲　header ▲▲▲　*/
+
+
+/* ▼▼▼　about ▼▼▼　*/
+
+.about {
+    width: 100%;
+    
+    margin: auto;
+    margin-bottom: 112px;
+}
+
+.about-text-area {
+    width: 100%;
+    margin: auto;
+    max-width: 522px;
+}
+
+.about-message-text {
+    width: 100%;
+    margin: 32px 0;
+}
+
+.about-message-text p{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.more-link {
+    max-width: 285px;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.more-link a {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-link a span {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EFE6E7;
+
+}
+
+.about-question {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.about-question .chat-box {
+    position: absolute;
+    top: -32px;
+    right: 35px;
+}
+
+.about-slider {
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+
+.slider-top, .slider-bottom {
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+/* スライダーの速さ調整 */
+.slider-top.animating{
+    animation: imgSlider 30s linear infinite; 
+}
+.slider-bottom.animating{
+    animation: imgSliderRight 30s linear infinite; 
+}
+
+@keyframes imgSlider {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+@keyframes imgSliderRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.about-slider .slider-item {
+    width: 20%;
+    flex-shrink: 0;
+    aspect-ratio: 265 / 177;
+    list-style: none;
+    list-style-type: none;
+}
+
+.about-slider .slider-top img,
+.about-slider .slider-bottom img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.slider-top.sp-only {
+    display: none;
+}
+
+
+/* ▲▲▲　about ▲▲▲　*/
+
+
+/* ▼▼▼　service ▼▼▼　*/
+.service {
+    width: 100%;
+    margin-bottom: 72px;
+    background-color: #ffffff84;
+    padding: 56px 26px;
+    box-sizing: border-box;
+}
+
+.service-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.service-top .service-question {
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    margin-left: 35px;
+}
+.service-question .chat-box {
+    justify-content: left;
+}
+.service-top h3 {
+    width: calc(100% / 3)
+}
+
+.service .jp-title {
+    font-size: 48px;
+}
+
+.service-top .service-space-blank {
+    width: calc(100% / 3);
+}
+
+.service-contents {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.service-item {
+    width: calc(100% / 3);
+    max-width: 344px;
+}
+
+.service-item .service-img-box {
+    width: 100%;
+    max-height: 172px;
+    border: 1px solid #EFE6E7;
+    position: relative;
+    padding: 2px;
+
+    aspect-ratio: 344 / 172;
+
+}
+
+.service-item .service-img-box img {
+    max-height: 172px;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    
+}
+
+.service-item .service-img-box p {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    color: #FFF;
+    font-family: "Shippori Mincho B1";
+    font-size: clamp(12px, 2vw, 24px);
+    font-weight: 800;
+    line-height: 40%;
+    letter-spacing: -0.48px;
+    opacity: 0.85;
+}
+
+.service-text {
+    color: #000;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30.4px;
+    letter-spacing: -0.48px;
+}
+
+/* ▲▲▲　service ▲▲▲　*/
+
+
+
+/* ▼▼▼　voice ▼▼▼　*/
+
+.voice {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 26px; /* imgが削れるため */
+}
+.voice-left,
+.voice-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.voice-left, .voice-right{
+    position: relative;
+}
+.voice-left-item, .voice-right-item {
+    position: absolute;
+}
+.voice-left-item img , .voice-right-item img {
+    width: 100%;
+    height: auto;
+}
+.voice-left-1{width:136px; height:136px;top:115px;right:81px;}
+.voice-left-2{width:120px; height:120px;top:353px;right:216px;}
+.voice-left-3{width:82px; height:82px;top:457px;right:82px;}
+.voice-left-4{width:136px; height:136px;top:636px;right:67px;}
+.voice-left-5{width:82px; height:82px;top:881px;right:178px;}
+
+.voice-right-1{width:81px; height:81px;top:47px;left:18px;}
+.voice-right-2{width:136px; height:136px;top:251px;left:165px;}
+.voice-right-3{width:91px; height:91px;top:439px;left:101px;}
+.voice-right-4{width:166px; height:166px;top:608px;left:195px;}
+.voice-right-5{width:136px; height:136px;top:896px;left:73px;}
+
+.voice-center {
+    flex: 0 0 auto;
+    max-width: 614px;
+    width: 75%;
+}
+
+.voice-lead {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.voice-lead p {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.voice-contents {
+    width: 100%;
+}
+
+.voice-contents .voice-question {
+    width: 100%;
+    margin-top: 48.5px;
+    margin-bottom: 24px;
+}
+
+.voice-contents .voice-answer {
+    width: 100%;
+    margin-bottom: 9px;
+}
+
+.chat-box .long-text {
+    max-width: none;
+    width: calc(100% - 106px);
+}
+
+/* ▲▲▲　voice ▲▲▲　*/
+
+
+.end-line {
+    width: 100%;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.end-line span {
+    margin: 0 10px;
+}
+
+
+/* ▼▼▼　footer ▼▼▼　*/
+footer {
+    width: 100%;
+    margin-top: 48px;
+}
+
+footer .footer-message {
+    width: 100%;
+}
+
+footer .footer-message .footer-message-image {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+footer .footer-message .footer-message-image img {
+    max-width: 367px;
+    transform: translateY(2px);
+}
+
+footer .footer-message .footer-message-image .footer-message-text span {
+    position: absolute;
+    color: #E1222A;
+    font-family: "Shippori Mincho B1";
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 82px;
+    letter-spacing: -2.88px;
+    top: 50%;
+    right: 50%;
+    transform: translateX(-50px) translateY(-70%);
+    z-index: -999;
+}
+
+footer .footer-message .footer-message-image .footer-message-text span:last-child {
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(50px) translateY(-70%);
+}
+
+.footer-main {
+    background-color: #E1222A;
+    padding: 48px 0 40px 0;
+}
+
+.footer-main .footer-leed {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.footer-main .footer-leed p {
+    color: #FFF;
+    font-family: "Shippori Mincho B1";
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 25.6px;
+    letter-spacing: -1px;
+}
+
+.footer-question {
+    margin-bottom: 48px;
+}
+
+.footer-question .footer-chat-text {
+    max-width: none;
+}
+
+.footer-cta {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.footer-cta .line {
+    width: 50%;
+    max-width: 320px;
+}
+
+.footer-cta .line p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: -0.84px;
+    margin-bottom: 12px;
+}
+
+.footer-cta .line .line-box {
+    width: 100%;
+}
+
+.footer-cta .line .line-box a {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #FFF;
+    padding: 18px 20px;
+}
+
+.footer-cta .line .line-box a img {
+    width: 28px;
+    height: 28px;
+}
+.footer-cta .line .line-box a span {
+    color:  #000;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.footer-cta .line .line-box a .cta-arrow {
+    background-color: #E1222A;
+}
+
+.footer-cta .line .line-box a .cta-arrow::after {
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+}
+
+.footer-cta .mynavi {
+    width: 50%;
+    max-width: 320px;
+}
+
+.footer-cta .mynavi p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: -0.9px;
+    margin-bottom: 16px;
+}
+
+.footer-cta .mynavi .more-link {
+    margin-top: 0;
+    max-width: 252px;
+}
+
+.footer-cta .mynavi .more-link a {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFF;
+}
+
+.footer-cta .mynavi .more-link a span{
+    color: #FFF;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    border: none;
+    padding: 0;
+}
+
+.footer-cta .mynavi .more-link a .arrow-more {
+    background-color: #FFF;
+    margin-bottom: 0;
+}
+
+.footer-end {
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+}
+
+.footer-end p, .footer-end span{
+    color: #FFF;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.footer-end .corporate .footer-arrow {
+    margin-left: 4px;
+    background-color: #000;
+}
+
+.footer-end .corporate a{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ▲▲▲　footer ▲▲▲　*/
+
+
+
+/* * * * * * * * * * * * * * * * * * 
+ * 
+ * タブレットサイズ スタイル 
+ * 767px 〜 1281px 相対的に拡大・縮小
+ *
+ * * * * * * * * * * * * * * * * * */
+@media screen and (max-width: 1280px) {
+    .logo-area{
+        width: 30vw;
+        margin-right: auto;
+    }
+    
+    .header-nav {
+        min-width: unset;
+        
+    }
+
+    .hero-catch {
+        font-size: clamp(86px, 8vw ,100px);
+        transform: translateY(17px);
+    }
+
+    .hero-center-name {
+        position: absolute;
+        color: #000;
+        font-family: "Shippori Mincho B1";
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 25px;
+        letter-spacing: 0.3px;
+        padding: 5px 10px;
+        background-color: #FFF;
+        transform: translateY(calc(-100% - 30px));
+    }
+    
+    .header-cta {
+        width: 24vw;
+        margin-left: auto;
+    }
+
+    .header-nav ul li a {
+        font-size: clamp(5px, 1.2vw, 13px);
+    }
+    
+    .header-cta a span {
+        font-size: clamp(5px, 1.3vw, 13px);
+    }
+
+    footer .footer-message .footer-message-image img {
+        width: 28%;
+        height: auto;
+        max-width: none;
+    }
+
+    footer .footer-message .footer-message-image .footer-message-text span {
+        font-size: clamp(28px, 3vw, 48px);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * 
+ * 
+ * SPサイズ スタイル 
+ * 〜 767px 相対的に拡大・縮小
+ *
+ * * * * * * * * * * * * * * * * * */
+@media screen and (max-width: 767px) {
+    .pc-only {
+        display: none;
+    }
+    .sp-only {
+        display: block;
+    }
+
+    /* .cta-arrow {
+        width: 20px;
+        height: 20px;
+    } */
+
+    /* .cta-arrow::after{
+        top: 6px;
+        right: 8.5px;
+        width: 6.5px;
+        height: 6.5px;
+    } */
+
+    .chat-box p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    header {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .hero-catch.sp-only{
+        font-size: 64px;
+        font-size: clamp(52px, 7.5vw, 64px);
+    }
+
+    .hero-catch.sp-only .narrow{
+        display: inline-block;
+        letter-spacing: -45px;
+    }
+
+    .hero-photos {
+        height: auto;
+    }
+
+    .hero-center {
+        height: auto;
+    }
+
+    .hero-center .hero-center-1 img {
+        max-width: 289px;
+        max-height: 273px;
+        width: 100%;
+        height: auto;
+    } 
+
+    .header-text {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 16px;
+        padding: 40px 20px;
+    }
+
+    .header-guide {
+        display: none;
+    }
+
+    .header-guide-sp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .entry-banner {
+        width: 100%;
+        position: absolute;
+        position: fixed;
+        bottom: -10px;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .entry-banner img {
+        width: 100%;
+    }
+
+    .logo-area{
+        width: auto;
+        padding: 0;
+        margin-right: auto;
+    }
+
+    .header-hamburger-menu {
+        width: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font: inherit;
+        color: inherit;
+    }
+
+    .header-hamburger-menu p {
+        font-family: "Shippori Mincho B1";
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 21px;
+        letter-spacing: -0.32px;
+    }
+    
+    .header-hamburger-menu span {
+        position: absolute;
+        display: inline-block;
+        width: 16px;
+        height: 2px;
+        top: calc(100% / 3);
+        left: -24px;
+        background-color: #000;
+    }
+    
+    .header-hamburger-menu span::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 8px;
+        height: 2px;
+        top: 5px;
+        left: 0;
+        background-color: #000;
+    }
+
+    .hero-left, .hero-right {
+        display: none;
+    }
+
+    h3 .eng-title .eng-text{
+        font-size: 13px;
+    }
+
+    h3 .jp-title{
+        font-size: 48px;
+    }
+
+
+
+
+    /* footer */
+    /* footer */
+    /* about */
+
+    .about-question.sp-only .chat-box  {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: translate(0,0);
+        padding: 0 24px;
+    }
+
+    .about-question.sp-only .chat-box p {
+        font-size: 14px;
+    }
+
+    .about h3 .jp-title {
+        font-size: 42px;
+    }
+
+    .about-message-text p{
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+
+
+    .about-slider {
+        width: 100%;
+    }
+
+    .about-slider .slider-top .slider-item,
+    .about-slider .slider-bottom .slider-item{
+        width: 36%;
+    }
+
+    .slider-top.sp-only {
+        display: flex;
+    }
+    .slider-top.sp-only.animating{
+        animation: imgSlider 30s linear infinite; 
+    }
+
+    @keyframes imgSlider {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+    }
+
+
+
+    /* service */
+    .service {
+        padding: 40px 24px 56px 24px;
+    }
+
+    .service-top {
+        position: relative;
+    }
+
+    .service-top h3{
+        width: 100%;
+    }
+
+    .service-top .service-question {
+        position: absolute;
+        margin: 0;
+        /* max-width: 356px; */
+        margin: auto;
+    }
+
+    .service-question.sp-only .chat-box {
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+
+    .service-contents {
+        width: 100%;
+        display: block;
+    }
+
+    .service-contents .service-item {
+        width: 100%;
+        max-width: 354px;
+        margin: auto;
+        margin-bottom: 32px;
+    }
+    
+    .service-contents .service-item .service-img-box {
+        width: 100%;
+        max-height: 106px;
+        margin-bottom: 12px;
+    }
+
+    .service-contents .service-item .service-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .service-text {
+        font-size: 15px;
+    }
+
+    .service-item .service-img-box p{
+        font-size: 24px;
+    }
+
+    .service-item:first-child .service-img-box p,
+    .service-item:last-child .service-img-box p{
+        left: auto;
+        right: 24px;
+    }
+
+
+
+
+
+    /* voice */
+    .voice-center {
+        width: 100%;
+        padding: 0 24px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .voice-lead p{
+        font-size: 14px;
+    }
+
+
+    /* footer */
+    .footer-message-text {
+        width: 100%;
+        transform: translateY(25px);
+    }
+    
+    footer .footer-message .footer-message-image .footer-message-text{
+        width: 100%;
+        display: block;
+    }
+
+    footer .footer-message .footer-message-image .footer-message-text span, 
+    footer .footer-message .footer-message-image .footer-message-text span:last-child {
+        width: 100%;
+        position: static; 
+        display: block;
+        transform: translate(0, 0);
+        line-height: 1.5;
+        font-size: 28px;
+    }
+
+    .footer-main {
+        padding: 48px 29px;
+    }
+
+    .footer-question {
+        max-width: 372px;
+        margin: 0 auto 48px auto;
+    }
+    .footer-question img {
+        margin-left: 0;
+    }
+
+    .footer-cta {
+        width: 100%;
+        display: block;
+    }
+
+    .footer-cta .line {
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .footer-cta .line .line-box {
+        max-width: 320px;
+        margin: auto;
+        gap: 0;
+    }
+    
+    .footer-cta .line .line-box a {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .footer-cta .line .line-box a img {
+        width: 8.75%;
+        height: auto;
+    }
+
+    .footer-cta .line .line-box a span {
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .footer-cta .mynavi {
+        width: 100%;
+        margin: auto;
+        margin: 0;
+    }
+
+    .footer-cta .mynavi p {
+        font-size: 13px;
+    }
+
+    .footer-cta .mynavi .more-link a {
+        font-size: 15px;
+    }
+}
