@@ -5,6 +5,10 @@
  *
  * * * * * * * * * * * * * * * * * */
 
+html {
+  scroll-behavior: smooth;
+}
+
  /* ▼▼▼　共通アイテム ▼▼▼　*/
 .pc-only {
     display: block;
@@ -29,12 +33,22 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    padding: 8px;
 }
 
 .arrow-more svg {
     width: 9px;
     height: 9px;
-    padding: 5px;
+}
+
+.arrow-more.under {
+    max-width: 25px;
+    max-height: 25px;
+}
+.arrow-more.under svg {
+    width: 12px;
+    height: 12px;
+    padding: 4px;
 }
 
 h3 {
@@ -142,7 +156,6 @@ body {
     background-image:
     radial-gradient(#DCDCDC 9%, transparent 9%);
     background-size: 12px 12px;
-    /* background-position: 0 0, 20px 20px; */
     background-color: #F3F3F3;
 }
 
@@ -167,7 +180,8 @@ body {
 header{
     width: 100%;
     overflow: hidden;
-    margin-bottom: 80px;
+    overflow: hidden;
+    position: relative;
 }
 
 .header-guide {
@@ -177,7 +191,8 @@ header{
     background-image:none;
     background-color: #F3F3F3;
     border-bottom: 1px solid #EAEAEA;
-    /* margin-bottom: 4px; */
+    position: fixed;
+    z-index: 200;
 }
 
 .logo-area {
@@ -213,6 +228,10 @@ header{
     font-weight: 800;
 }
 
+.header-nav ul li a:hover {
+    color: #E1222A;
+}
+
 .logo-area img {
     width: 100%;
 }
@@ -233,6 +252,10 @@ header{
     padding: 14px 12px 14px 20px;
 }
 
+.header-cta:hover {
+    background-color: #BB1F25;
+}
+
 .header-cta a span {
     display: inline-block;
     margin-right: 12px;
@@ -243,6 +266,11 @@ header{
     line-height: 21px;
     letter-spacing: -0.32px;
     white-space: nowrap;
+}
+
+.header-cta .arrow-more {
+    margin-bottom: 0;
+    background-color: #FFF;
 }
 
 .cta-arrow {
@@ -267,12 +295,15 @@ header{
 
 .header-guide-sp {
     display: none;
+    position: fixed;
+    z-index: 200;
 }
 
 /* header-contents */
 
 .header-contents {
     width: 100%;
+    padding-top: 54px;
 }
 
 .header-img {
@@ -338,6 +369,15 @@ header{
 .hero-center .hero-center-1 img {
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transform: translateY(100%); /* 少し下から */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+}
+
+.hero-center .hero-center-1 img.is-loaded{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-left-1 { position: absolute; width: 154px; top: -50px;  right: 300px;}
@@ -395,6 +435,7 @@ header{
 .message p {
     margin: 0 0 1em;
     line-height: 2;
+    font-feature-settings: "palt";
 }
 
 .message-lead {
@@ -419,7 +460,7 @@ header{
 
 .about {
     width: 100%;
-    
+    margin-top: 80px;
     margin: auto;
     margin-bottom: 112px;
 }
@@ -446,7 +487,7 @@ header{
 }
 
 .more-link {
-    max-width: 285px;
+    max-width: 290px;
     margin: auto;
     margin-top: 32px;
 }
@@ -458,6 +499,7 @@ header{
     align-items: center;
 }
 
+
 .more-link a span {
     font-family: "Zen Kaku Gothic New";
     font-size: 16px;
@@ -466,7 +508,17 @@ header{
     margin-right: 8px;
     padding-bottom: 10px;
     border-bottom: 2px solid #EFE6E7;
+    transition: 0.2s;
+}
 
+.about .more-link span:hover , .service .more-link span:hover {
+    color: #BB1F25;
+    border-bottom: 2px solid #BB1F25;
+}
+
+.about .more-link a:hover .arrow-more,
+.service .more-link a:hover .arrow-more {
+    background-color: #BB1F25;
 }
 
 .about-question {
@@ -491,7 +543,7 @@ header{
     width: fit-content;
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     gap: 8px;
 }
 
@@ -548,7 +600,7 @@ header{
 /* ▼▼▼　service ▼▼▼　*/
 .service {
     width: 100%;
-    margin-bottom: 72px;
+    /* margin-bottom: 72px; */
     background-color: #ffffff84;
     padding: 56px 26px;
     box-sizing: border-box;
@@ -598,7 +650,7 @@ header{
     border: 1px solid #EFE6E7;
     position: relative;
     padding: 2px;
-
+    margin-bottom: 16px;
     aspect-ratio: 344 / 172;
 
 }
@@ -645,6 +697,7 @@ header{
     display: flex;
     overflow: hidden;
     padding-bottom: 26px; /* imgが削れるため */
+    padding-top: 72px;
 }
 .voice-left,
 .voice-right {
@@ -746,6 +799,7 @@ footer .footer-message .footer-message-image {
 }
 
 footer .footer-message .footer-message-image img {
+    width: 36%;
     max-width: 367px;
     transform: translateY(2px);
 }
@@ -809,6 +863,7 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
     max-width: 320px;
 }
 
+
 .footer-cta .line p {
     color: #FFF;
     text-align: center;
@@ -822,7 +877,9 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
 
 .footer-cta .line .line-box {
     width: 100%;
+    transition: 0.2s;
 }
+
 
 .footer-cta .line .line-box a {
     display: block;
@@ -872,7 +929,13 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
 
 .footer-cta .mynavi .more-link {
     margin-top: 0;
-    max-width: 252px;
+    max-width: 260px;
+    transition: 0.2s;
+}
+
+.footer-cta .line .line-box:hover,
+.footer-cta .mynavi .more-link:hover {
+    opacity: 75%;
 }
 
 .footer-cta .mynavi .more-link a {
@@ -914,11 +977,17 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
 .footer-end .corporate .footer-arrow {
     margin-left: 4px;
     background-color: #000;
+    margin-bottom: 0;
 }
 
 .footer-end .corporate a{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.footer-end .corporate a:hover{
+    opacity: 75%;
 }
 
 
@@ -974,12 +1043,6 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         font-size: clamp(5px, 1.3vw, 13px);
     }
 
-    footer .footer-message .footer-message-image img {
-        width: 28%;
-        height: auto;
-        max-width: none;
-    }
-
     footer .footer-message .footer-message-image .footer-message-text span {
         font-size: clamp(28px, 3vw, 48px);
     }
@@ -1000,18 +1063,6 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         display: block;
     }
 
-    /* .cta-arrow {
-        width: 20px;
-        height: 20px;
-    } */
-
-    /* .cta-arrow::after{
-        top: 6px;
-        right: 8.5px;
-        width: 6.5px;
-        height: 6.5px;
-    } */
-
     .chat-box p {
         font-size: 14px;
         line-height: 1.5;
@@ -1022,6 +1073,7 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         margin-bottom: 0;
         padding: 0 16px;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .hero-catch.sp-only{
@@ -1047,7 +1099,9 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         max-height: 273px;
         width: 100%;
         height: auto;
-    } 
+        }
+
+
 
     .header-text {
         width: 100%;
@@ -1060,6 +1114,11 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         display: none;
     }
 
+    .header-guide-box {
+        position: relative;
+        overflow: hidden;
+    }
+
     .header-guide-sp {
         display: flex;
         justify-content: space-between;
@@ -1067,17 +1126,56 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         width: 100%;
         padding: 16px;
         box-sizing: border-box;
+        left: 0;
+        background-color: #F3F3F3;
+    }
+
+    .header-guide-sp-open {
+        position: fixed;
+        width: 100%;
+        background-color: #FFF;
+        background-image:
+            radial-gradient(#DCDCDC 9%, transparent 9%);
+        background-size: 12px 12px;
+        background-color: #F3F3F3;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        transform: translateX(100vw) translateY(54px);
+        z-index: 200;
+        transition: transform 0.5s;
+        padding: 40px;
+    }
+    .header-guide-sp-open.active {
+        width: 100%;
+        transform: translateX(0) translateY(54px);
+        padding: 40px;
+    }
+
+    .header-guide-sp-open .more-link {
+        margin: 0;
+        max-width: none;
+        margin-bottom: 21px;
+    }
+
+    .header-guide-sp-open a span{
+        width: 100%;
+        transition: 0.2s;
+    
+    }
+    .header-guide-sp-open a span:hover{
+        color: #E1222A;
     }
 
     .entry-banner {
         width: 100%;
         position: absolute;
         position: fixed;
-        bottom: -10px;
+        bottom: -2%;
         width: 100%;
         z-index: 100;
     }
-
+    
     .entry-banner img {
         width: 100%;
     }
@@ -1110,7 +1208,7 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         letter-spacing: -0.32px;
     }
     
-    .header-hamburger-menu span {
+    .header-hamburger-menu .hamburger-1 {
         position: absolute;
         display: inline-block;
         width: 16px;
@@ -1118,16 +1216,28 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         top: calc(100% / 3);
         left: -24px;
         background-color: #000;
+        transition: 0.3s;
     }
     
-    .header-hamburger-menu span::after {
-        content: "";
+    .header-hamburger-menu .hamburger-2 {
         position: absolute;
         display: inline-block;
         width: 8px;
         height: 2px;
-        top: 5px;
-        left: 0;
+        top: calc((100% / 3) + 5px);
+        left: -24px;
+        background-color: #000;
+        transition: 0.3s;
+    }
+    
+    .header-hamburger-menu .hamburger-1.active {
+        top: 50%;
+        transform: rotate(25deg);
+    }
+    .header-hamburger-menu .hamburger-2.active {
+        width: 16px;
+        top: 50%;
+        transform: rotate(-25deg);
         background-color: #000;
     }
 
@@ -1293,6 +1403,12 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         display: block;
     }
 
+    footer .footer-message .footer-message-image img {
+        width: 70%;
+        height: auto;
+        max-width: none;
+    }
+
     footer .footer-message .footer-message-image .footer-message-text span, 
     footer .footer-message .footer-message-image .footer-message-text span:last-child {
         width: 100%;
@@ -1344,13 +1460,18 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
     }
 
     .footer-cta .line .line-box a span {
-        font-size: clamp(12px, 2vw, 16px);
+        font-size: 16px;
+    }
+
+    .line-box .footer-arrow {
+        background-color: #E1222A;
+        margin-bottom: 0;
     }
 
     .footer-cta .mynavi {
         width: 100%;
         margin: auto;
-        margin: 0;
+        margin-bottom: 0;
     }
 
     .footer-cta .mynavi p {
@@ -1359,5 +1480,22 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
 
     .footer-cta .mynavi .more-link a {
         font-size: 15px;
+    }
+
+    .footer-end {
+        margin-bottom: 16%;
+        z-index: 300;
+    }
+
+    .footer-end span {
+        line-height: 2.7;
+        padding: 5px 0;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .footer-cta .line .line-box a span {
+        font-size: 4vw;
     }
 }

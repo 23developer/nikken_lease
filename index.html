@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body>      
     <header>
         <div class="header-guide">
             <div class="logo-area">
@@ -21,16 +21,22 @@
             </div>
             <div class="header-nav">
                 <ul>
-                    <li><a href="#">メッセージ</a></li>
-                    <li><a href="#">私たちについて</a></li>
-                    <li><a href="#">事業領域</a></li>
-                    <li><a href="#">社員の声</a></li>
+                    <li><a href="#message">メッセージ</a></li>
+                    <li><a href="#about">私たちについて</a></li>
+                    <li><a href="#service">事業領域</a></li>
+                    <li><a href="#voice">社員の声</a></li>
                 </ul>
             </div>
             <div class="header-cta">
                 <a href="">
                     <span>LINEで最新情報を受け取る</span>
-                    <div class="cta-arrow"></div>
+                    <div class="arrow-more">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 20 20" fill="none" stroke="#BB1F25" stroke-linecap="butt" stroke-linejoin="miter">
+                            <path stroke-width="3" d="M10.5 1.5H4.5A3 3 0 0 0 1.5 4.5v11a3 3 0 0 0 3 3h11a3 3 0 0 0 3-3V9"/>
+                            <path stroke-width="3" d="M7 13L18.5 1.5"/>
+                            <polyline stroke-width="3" points="13 1.5 18.5 1.5 18.5 6.5"/>
+                        </svg>
+                    </div>
                 </a>
             </div>
         </div>
@@ -41,9 +47,68 @@
                 <img src="img/header/logo_company.png" alt="日建リース工業株式会社 ロゴ画像">
             </div>
             <button type="button" class="header-hamburger-menu" aria-label="メニューを開く">
-                <span></span>
+                <span class="hamburger-1"></span>
+                <span class="hamburger-2"></span>
                 <p>MENU</p>
             </button>
+        </div>
+        
+        <!-- header sp版 オープン -->
+        <div class="header-guide-sp-open sp-only">
+            <div class="header-guide-box">
+                <div class="more-link">
+                    <a href="#message">
+                        <span>メッセージ</span>
+                        <div class="arrow-more under">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                <g fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+                                  <path d="M50 20 V70" />
+                                  <polyline points="25,50 50,75 75,50" />
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="more-link">
+                    <a href="#about">
+                        <span>私たちについて</span>
+                        <div class="arrow-more under">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                <g fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+                                  <path d="M50 20 V70" />
+                                  <polyline points="25,50 50,75 75,50" />
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="more-link">
+                    <a href="#service">
+                        <span>事業領域</span>
+                        <div class="arrow-more under">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                <g fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+                                  <path d="M50 20 V70" />
+                                  <polyline points="25,50 50,75 75,50" />
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="more-link">
+                    <a href="#voice">
+                        <span>社員の声</span>
+                        <div class="arrow-more under">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                <g fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+                                  <path d="M50 20 V70" />
+                                  <polyline points="25,50 50,75 75,50" />
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="header-contents">
@@ -79,18 +144,17 @@
                     </div>
                 </div>
             </div>
-            <div class="header-text">
+            <div id="message" class="header-text">
                 <div class="message-title">
                     <span class="plus"></span>
                     <h2>MESSAGE</h2>
                     <span class="plus"></span>
                 </div>
-                <div class="message">
-                    <p class="message-lead">私たちの現場は、至って堅実です。</p>
-                    <!-- <p class="message-sub"></p> -->
+                <div id="message" class="message">
+                    <p class="message-lead">私たちの現場は<span style="margin-right: -0.4em">、</span>至って堅実です。</p>
                     <p>建設・物流・介護。<br>この国のインフラをシェアという仕組みで支えるには<br>強い責任感が欠かせません。</p>
-                    <p>必要なものを分かち合い、循環させることで、<br>社会インフラを守り抜く。<br>自分の仕事が、誰かの生活を支え、未来をつくっていく。</p>
-                    <p class="message-ending">そんなプロフェッショナルとしての<br>第一歩を、ここから踏み出しませんか?</p>
+                    <p>必要なものを分かち合い<span style="margin-right: -0.4em">、</span>循環させることで<span style="margin-right: -0.4em">、</span><br>社会インフラを守り抜く。<br>自分の仕事が<span style="margin-right: -0.4em">、</span>誰かの生活を支え<span style="margin-right: -0.4em">、</span>未来をつくっていく。</p>
+                    <p class="message-ending">そんなプロフェッショナルとしての<br>第一歩を<span style="margin-right: -0.4em">、</span>ここから踏み出しませんか?</p>
                 </div>
             </div>
         </div>
@@ -100,7 +164,7 @@
     </div>
 
     <div class="main">
-        <div class="about">
+        <div class="about" id="about">
             <div class="about-text-area">
                 <h3>
                     <div class="eng-title">
@@ -146,7 +210,7 @@
                 </div>
             </div>
             <div class="about-slider">
-                <ul class="slider-top pc-only">
+                <ul class="slider-top">
                     <li class="slider-item">
                         <img src="img/about/about_slide_1.png" alt="aboutのスライダー画像1">
                     </li>
@@ -168,7 +232,7 @@
                     </li>
                 </ul>
 
-                <ul class="slider-bottom pc-only">
+                <ul class="slider-bottom">
                     <li class="slider-item">
                         <img src="img/about/about_slide_6.png" alt="aboutのスライダー画像6">
                     </li>
@@ -189,32 +253,9 @@
                         <img src="img/about/about_slide_10.png" alt="aboutのスライダー画像10">
                     </li>
                 </ul>
-
-                <ul class="slider-top sp-only">
-                    <li class="slider-item">
-                        <img src="img/about/about_slide_1.png" alt="aboutのスライダー画像1">
-                    </li>
-
-                    <li class="slider-item">
-                        <img src="img/about/about_slide_2.png" alt="aboutのスライダー画像2">
-                    </li>
-
-                    <li class="slider-item">
-                        <img src="img/about/about_slide_3.png" alt="aboutのスライダー画像3">
-                    </li>
-
-                    <li class="slider-item">
-                        <img src="img/about/about_slide_4.png" alt="aboutのスライダー画像4">
-                    </li>
-
-                    <li class="slider-item">
-                        <img src="img/about/about_slide_5.png" alt="aboutのスライダー画像5">
-                    </li>
-                </ul>
-
             </div>
         </div>
-        <div class="service">
+        <div id="service" class="service">
             <div class="service-top">
                 <div class="service-question pc-only">
                     <div class="chat-box chat-box-left">
@@ -280,7 +321,7 @@
                 </a>
             </div>
         </div>
-        <div class="voice">
+        <div id="voice" class="voice">
             <div class="voice-left pc-only">
                 <div class="voice-left-item voice-left-1"><img src="img/voice/vice_left_1.png" alt=""></div>
                 <div class="voice-left-item voice-left-2"><img src="img/voice/vice_left_2.png" alt=""></div>
@@ -402,7 +443,7 @@
                 <div class="footer-message-text">
                     <span>最後までご覧いただき</span><span>ありがとうございました。</span>
                 </div>
-                <img src="img/header/header_main.png" alt="">
+                <img src="img/footer_main.gif" alt="">
             </div>
             <div class="footer-main">
                 <div class="footer-leed">
@@ -428,7 +469,13 @@
                             <a href="">
                                 <img src="img/icon/icon_line.png" alt="LINEのアイコン">
                                 <span>LINEで最新情報を受け取る</span>
-                                <div class="cta-arrow"></div>
+                                <div class="arrow-more footer-arrow">                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 20 20" fill="none" stroke="white" stroke-linecap="butt" stroke-linejoin="miter">
+                                        <path stroke-width="3" d="M10.5 1.5H4.5A3 3 0 0 0 1.5 4.5v11a3 3 0 0 0 3 3h11a3 3 0 0 0 3-3V9"/>
+                                        <path stroke-width="3" d="M7 13L18.5 1.5"/>
+                                        <polyline stroke-width="3" points="13 1.5 18.5 1.5 18.5 6.5"/>
+                                    </svg>
+                                </div>
                             </a>
                         </div>
                     </div>
