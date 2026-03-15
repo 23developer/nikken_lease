@@ -34,6 +34,7 @@ html {
     align-items: center;
     margin-bottom: 10px;
     padding: 8px;
+    transition: 0.2s;
 }
 
 .arrow-more svg {
@@ -226,6 +227,7 @@ header{
 .header-nav ul li a {
     font-size: 13px;
     font-weight: 800;
+    transition: 0.2s;
 }
 
 .header-nav ul li a:hover {
@@ -243,6 +245,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #E1222A;
+    transition: 0.2s;
 }
 
 .header-cta a {
@@ -911,6 +914,10 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
     border-right: 2px solid #FFF;
 }
 
+.footer-cta .line .line-box a .arrow-more {
+    margin-bottom: 0;
+}
+
 .footer-cta .mynavi {
     width: 50%;
     max-width: 320px;
@@ -1174,10 +1181,21 @@ footer .footer-message .footer-message-image .footer-message-text span:last-chil
         bottom: -2%;
         width: 100%;
         z-index: 100;
+        pointer-events: none;
     }
     
+    .entry-banner a {
+        width: 100%;
+        height: 70%;
+        display: block;
+        pointer-events: auto;
+        position: absolute;
+        bottom: 0;
+    }
+
     .entry-banner img {
         width: 100%;
+        pointer-events: none;
     }
 
     .logo-area{
